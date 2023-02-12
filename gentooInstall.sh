@@ -111,9 +111,7 @@ emerge sys-fs/dosfstools
 echo 'GRUB_PLATFORMS="efi-64"' >> /etc/portage/make.conf
 emerge sys-boot/grub
 grub-install --target=x86_64-efi --efi-directory=/mnt/efi/
-#grub-mkconfig -o /mnt/efi/grub/grub.cfg
-#grub-mkconfig -o /boot/grub/grub.cfg
-# need either one above?
+grub-mkconfig -o /boot/grub/grub.cfg
 
 exit
 reboot
