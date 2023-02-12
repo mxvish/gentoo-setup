@@ -1,14 +1,14 @@
-#ip link
+ip link
 
-##assume network name is wlp2s0
-#echo 'ctrl_interface=/run/wpa_supplicant
-#update_config=1' >> /etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf
+#assume network name is wlp2s0
+echo 'ctrl_interface=/run/wpa_supplicant
+update_config=1' >> /etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf
 
-#wpa_passphrase $SSID $WIFI_PASSWORD >> /etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf
+wpa_passphrase $SSID $WIFI_PASSWORD >> /etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf
 
-#vi /etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf
-## Delete not hashed psk
-#wpa_supplicant -B -i wlp2s0 -c /etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf
+vi /etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf
+# Delete not hashed psk
+wpa_supplicant -B -i wlp2s0 -c /etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf
 
 #fdisk -l
 #cfdisk /dev/nvme0n1 #if SSD or HDD is /dev/nvme0n1
@@ -84,7 +84,7 @@ env-update && source /etc/profile && export PS1="(chroot) ${PS1}"
 
 emerge sys-kernel/linux-firmware
 emerge sys-apps/pciutils
-#emerge info?
+#emerge --info?
 emerge sys-kernel/genkernel
 
 echo -e '/dev/nvme0n1p1\t/mnt/efi\tvfat\tdefaults\t0 2' >> /etc/fstab #because EFI is vfat
