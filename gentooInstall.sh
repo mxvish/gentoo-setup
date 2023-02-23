@@ -27,7 +27,7 @@ wpa_supplicant -B -i wlp2s0 -c /etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf
 #swapon /dev/nvme0n1p6
 
 cd /mnt/gentoo
-links https://www.gentoo.org/downloads/mirror
+links https://gentoo.org/downloads/mirrors
 #JP -> http://ftp.riken.ac.jp/Linux/gentoo
 #press down arrow key
 #move down to /Linux/gentoo/releases/amd64/autobuilds
