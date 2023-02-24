@@ -46,7 +46,7 @@ vi etc/portage/make.conf
 mirrorselect -i -o >> etc/portage/make.conf
 #choose a https server per institutio
 
-mkdir --parents etc/portage/repos.conf
+mkdir -p etc/portage/repos.conf
 cp usr/share/portage/config/repos.conf etc/portage/repos.conf/gentoo.conf
 cp --dereference /etc/resolv.conf etc/
 
@@ -64,7 +64,6 @@ export PS1="(chroot) ${PS1}"
 #mkdir /mnt/efi
 #mount /dev/nvme0n1p1 /mnt/efi
 emerge-webrsync
-#echo 'sync-uri = rsync://rsync.asia.gentoo.org/gentoo-portage' >> /etc/portage/repos.conf/gentoo.conf
 emerge --sync
 eselect profile set 5 #desktop(stable)
 
