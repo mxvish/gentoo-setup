@@ -81,10 +81,7 @@ eselect locale list
 eselect locale set 4 #choose en_US.utf8
 env-update && source /etc/profile && export PS1="(chroot) ${PS1}"
 
-emerge gentoo-sources
-emerge linux-firmware
-emerge pciutils
-emerge genkernel
+emerge -q gentoo-sources linux-firmware pciutils genkernel
 
 echo -e '/dev/nvme0n1p1\t/mnt/efi\tvfat\tdefaults\t0 2' >> /etc/fstab #because EFI is vfat
 eselect kernel set 1
@@ -94,7 +91,7 @@ echo -e '/dev/nvme0n1p6\tnone\tswap\tsw\t0 0
 /dev/nvme0n1p5\t/\text4\tnoatime\t0 1' >> /etc/fstab
 sed -ie 's/localhost/kenter/g' /etc/conf.d/hostname
 
-emerge -n netifrc
+emerge -qn netifrc
 echo 'config_wlp2s0="dhcp"' > /etc/conf.d/net
 
 cd /etc/init.d
@@ -109,14 +106,13 @@ passwd #should be a mix of upper and lower case letters, digits and other charac
 #systemd-firstboot --prompt --setup-machine-id #or edit /etc/hostname & /etc/machine-id by myself?
 #systemctl preset-all --preset-mode=enable-only
 
-emerge sysklogd
+emerge -q sysklogd
 rc-update add sysklogd default
 
-emerge e2fsprogs dosfstools
-emerge wpa_supplicant
+emerge -q e2fsprogs dosfstools wpa_supplicant
 
 echo 'GRUB_PLATFORMS="efi-64"' >> /etc/portage/make.conf
-emerge dhcpcd grub
+emerge -q dhcpcd grub
 
 grub-install --target=x86_64-efi --efi-directory=/mnt/efi/
 grub-mkconfig -o /boot/grub/grub.cfg
