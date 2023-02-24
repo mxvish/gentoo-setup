@@ -65,6 +65,7 @@ export PS1="(chroot) ${PS1}"
 #mount /dev/nvme0n1p1 /mnt/efi
 emerge-webrsync
 emerge --sync
+eselect profile list
 eselect profile set 5 #desktop(stable)
 
 nano /etc/portage/make.conf
