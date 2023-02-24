@@ -113,6 +113,8 @@ emerge sysklogd
 rc-update add sysklogd default
 
 emerge e2fsprogs dosfstools
+emerge wpa_supplicant
+
 echo 'GRUB_PLATFORMS="efi-64"' >> /etc/portage/make.conf
 emerge dhcpcd grub
 
@@ -124,8 +126,6 @@ reboot
 
 #kenter login: root
 #passwd: root passwd
-
-emerge net-wireless/wpa_supplicant
 
 echo 'ctrl_interface=/run/wpa_supplicant
 update_config=1' >> /etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf
