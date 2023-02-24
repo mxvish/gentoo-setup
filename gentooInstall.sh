@@ -104,13 +104,13 @@ rc-update add net.wlp2s0 default
 #emerge net-misc/dhcpcd?
 #systemctl enable --now dhcpcd?
 
-sed -i '' -e 's/127.0.0.1\t/127.0.0.1\tkenter /g' /etc/hosts
+sed -ie 's/127.0.0.1\t/127.0.0.1\tkenter /g' /etc/hosts
 passwd #should be a mix of upper and lower case letters, digits and other characters
 
-systemd-firstboot --prompt --setup-machine-id #or edit /etc/hostname & /etc/machine-id by myself?
-systemctl preset-all --preset-mode=enable-only
+#systemd-firstboot --prompt --setup-machine-id #or edit /etc/hostname & /etc/machine-id by myself?
+#systemctl preset-all --preset-mode=enable-only
 
-emerge app-admin/sysklogd
+emerge sysklogd
 emerge sys-fs/e2fsprogs
 etc-update
 emerge sys-fs/dosfstools
