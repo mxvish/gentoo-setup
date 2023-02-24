@@ -92,7 +92,7 @@ genkernel all
 
 echo -e '/dev/nvme0n1p6\tnone\tswap\tsw\t0 0
 /dev/nvme0n1p5\t/\text4\tnoatime\t0 1' >> /etc/fstab
-echo 'hostname="kenter"' > /etc/conf.d/hostname
+sed -ie 's/localhost/kenter/g' /etc/conf.d/hostname
 emerge net-misc/dhcpcd
 systemctl enable --now dhcpcd
 
