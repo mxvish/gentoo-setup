@@ -36,7 +36,7 @@ links https://gentoo.org/downloads/mirrors
 #press q to quit links
 
 tar xpvf stage3-*.tar.xz --xattrs-include='*.*' --numeric-owner
-vi etc/portage/
+vi etc/portage/make.conf
 #add or edit it as follows
 #CHOST="x86_64-pc-linux-gnu"
 #COMMON_FLAGS="-02 -march=znver2 -pipe"
