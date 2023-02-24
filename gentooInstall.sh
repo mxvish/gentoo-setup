@@ -48,12 +48,12 @@ mirrorselect -i -o >> etc/portage/make.conf
 
 mkdir -p etc/portage/repos.conf
 cp usr/share/portage/config/repos.conf etc/portage/repos.conf/gentoo.conf
-cp --dereference /etc/resolv.conf etc/
+cp -L /etc/resolv.conf etc/
 
-mount --types proc /proc proc
-mount --rbind /sys sys
+mount -t proc /proc proc
+mount -R /sys sys
 mount --make-rslave sys
-mount --rbind /dev dev
+mount -R /dev dev
 mount --make-rslave dev
 
 chroot /mnt/gentoo /bin/bash
@@ -64,13 +64,13 @@ export PS1="(chroot) ${PS1}"
 #mkdir /mnt/efi
 #mount /dev/nvme0n1p1 /mnt/efi
 emerge-webrsync
-emerge --sync
+emerge -q --sync
 eselect profile list
 eselect profile set 5 #desktop(stable)
 
 nano /etc/portage/make.conf
 #USE="-bluetooth -systemd -qewebengine -webengine -sqlite"
-emerge --update --deep --newuse @world
+emerge -quDN @world
 
 echo "Asia/Tokyo" > /etc/timezone
 emerge --config timezone-data
@@ -94,7 +94,7 @@ echo -e '/dev/nvme0n1p6\tnone\tswap\tsw\t0 0
 /dev/nvme0n1p5\t/\text4\tnoatime\t0 1' >> /etc/fstab
 sed -ie 's/localhost/kenter/g' /etc/conf.d/hostname
 
-emerge --noreplace netifrc
+emerge -n netifrc
 echo 'config_wlp2s0="dhcp"' > /etc/conf.d/net
 
 cd /etc/init.d
@@ -113,7 +113,6 @@ emerge sysklogd
 rc-update add sysklogd default
 
 emerge e2fsprogs dosfstools
-#etc-update?
 echo 'GRUB_PLATFORMS="efi-64"' >> /etc/portage/make.conf
 emerge dhcpcd grub
 
@@ -133,7 +132,7 @@ update_config=1' >> /etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf
 wpa_passphrase $SSID $WIFI_PASSWORD >> /etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf
 vi /etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf
 # Delete not hashed psk
-wpa_supplicant -B -i wlp2s0 -c /etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf
+wpa_supplicant -Bi wlp2s0 -c /etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf
 systemctl enable --now wpa_supplicant@wlp2s0
 
 #cd / ?
