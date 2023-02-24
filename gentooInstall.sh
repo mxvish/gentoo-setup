@@ -93,8 +93,16 @@ genkernel all
 echo -e '/dev/nvme0n1p6\tnone\tswap\tsw\t0 0
 /dev/nvme0n1p5\t/\text4\tnoatime\t0 1' >> /etc/fstab
 sed -ie 's/localhost/kenter/g' /etc/conf.d/hostname
-emerge net-misc/dhcpcd
-systemctl enable --now dhcpcd
+
+emerge --noreplace netifrc
+echo 'config_wlp2s0="dhcp"' > /etc/conf.d/net
+
+cd /etc/init.d
+ln -s net.lo net.wlp2s0
+rc-update add net.wlp2s0 default
+
+#emerge net-misc/dhcpcd?
+#systemctl enable --now dhcpcd?
 
 sed -i '' -e 's/127.0.0.1\t/127.0.0.1\tkenter /g' /etc/hosts
 passwd #should be a mix of upper and lower case letters, digits and other characters
