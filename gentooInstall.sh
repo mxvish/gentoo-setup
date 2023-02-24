@@ -117,19 +117,21 @@ emerge -q dhcpcd grub
 grub-install --target=x86_64-efi --efi-directory=/mnt/efi/
 grub-mkconfig -o /boot/grub/grub.cfg
 
+#setup wifi according to https://wiki.gentoo.org/wiki/Wpa_supplicant#Using_OpenRC
+
+#echo 'ctrl_interface=/run/wpa_supplicant
+#update_config=1' >> /etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf
+#wpa_passphrase $SSID $WIFI_PASSWORD >> /etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf
+#vi /etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf
+## Delete not hashed psk
+#wpa_supplicant -Bi wlp2s0 -c /etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf
+#systemctl enable --now wpa_supplicant@wlp2s0
+
 exit
 reboot
 
 #kenter login: root
 #passwd: root passwd
-
-echo 'ctrl_interface=/run/wpa_supplicant
-update_config=1' >> /etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf
-wpa_passphrase $SSID $WIFI_PASSWORD >> /etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf
-vi /etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf
-# Delete not hashed psk
-wpa_supplicant -Bi wlp2s0 -c /etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf
-systemctl enable --now wpa_supplicant@wlp2s0
 
 #cd / ?
 useradd -m -G users,wheel,audio -s /bin/bash kenter
