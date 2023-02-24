@@ -8,7 +8,7 @@ wpa_passphrase $SSID $WIFI_PASSWORD >> /etc/wpa_supplicant/wpa_supplicant-wlp2s0
 
 vi /etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf
 # Delete not hashed psk
-wpa_supplicant -B -i wlp2s0 -c /etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf
+wpa_supplicant -Bi wlp2s0 -c /etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf
 
 #fdisk -l
 #cfdisk /dev/nvme0n1 #if SSD or HDD is /dev/nvme0n1
