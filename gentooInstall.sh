@@ -70,11 +70,10 @@ eselect profile set 5 #desktop(stable)
 
 nano /etc/portage/make.conf
 #USE="-bluetooth -systemd -qewebengine -webengine -sqlite"
-emerge --verbose --update --deep --newuse @world
-emerge --info | grep ^USE
+emerge --update --deep --newuse @world
 
 echo "Asia/Tokyo" > /etc/timezone
-emerge --config sys-libs/timezone-data
+emerge --config timezone-data
 echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen
 locale-gen
 
@@ -82,10 +81,10 @@ eselect locale list
 eselect locale set 4 #choose en_US.utf8
 env-update && source /etc/profile && export PS1="(chroot) ${PS1}"
 
-emerge sys-kernel/linux-firmware
-emerge sys-apps/pciutils
-#emerge --info?
-emerge sys-kernel/genkernel
+emerge gentoo-sources
+emerge linux-firmware
+emerge pciutils
+emerge genkernel
 
 echo -e '/dev/nvme0n1p1\t/mnt/efi\tvfat\tdefaults\t0 2' >> /etc/fstab #because EFI is vfat
 eselect kernel set 1
