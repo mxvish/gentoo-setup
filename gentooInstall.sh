@@ -111,6 +111,8 @@ passwd #should be a mix of upper and lower case letters, digits and other charac
 #systemctl preset-all --preset-mode=enable-only
 
 emerge sysklogd
+rc-update add sysklogd default
+
 emerge sys-fs/e2fsprogs
 etc-update
 emerge sys-fs/dosfstools
