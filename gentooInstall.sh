@@ -32,7 +32,7 @@ links https://gentoo.org/downloads/mirrors
 #press down arrow key
 #move down to /Linux/gentoo/releases/amd64/autobuilds
 #choose the latest directory
-#download stage3-amd64-*.tar.xz
+#download stage3-amd64-desktop-openrc*.tar.xz
 #press q to quit links
 
 tar xpvf stage3-*.tar.xz --xattrs-include='*.*' --numeric-owner
