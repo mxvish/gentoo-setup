@@ -18,7 +18,7 @@ echo 'exec i3' > ~/.xinitrc
 #rc-update add dbus default
 #/etc/init.d/dbus start
 
-emerge -q neofetch nm-applet ranger sudo vim
+emerge -q neofetch nm-applet ranger sudo vim xrandr
 
 rc-update add NetworkManager default
 rc-service NetworkManager start
