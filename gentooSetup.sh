@@ -18,4 +18,4 @@ echo 'exec i3' > ~/.xinitrc
 #rc-update add dbus default
 #/etc/init.d/dbus start
 
-emerge -q neofetch sudo vim
+emerge -q neofetch ranger sudo vim
