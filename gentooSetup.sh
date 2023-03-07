@@ -13,7 +13,9 @@ emerge -qDU @world
 emerge -q dmenu i3 i3status i3lock xfce4-terminal
 
 echo 'exec startx' >> .bash_profile
-echo 'exec i3' > ~/.xinitrc
+echo 'Xft.dpi: 120' > ~/.Xresources
+echo 'xrdb ~/.Xresources
+exec i3' > .xinitrc
 
 #rc-update add dbus default
 #/etc/init.d/dbus start
