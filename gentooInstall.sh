@@ -40,7 +40,7 @@ vi etc/portage/make.conf
 #add or edit it as follows
 #CHOST="x86_64-pc-linux-gnu"
 #COMMON_FLAGS="-02 -march=znver2 -pipe"
-#MAKEOPT="-j8" #8 = 16(RAM) / 2
+#MAKEOPTS="-j8" #8 = 16(RAM) / 2
 #ACCEPT_LICENSE="*"
 
 mirrorselect -i -o >> etc/portage/make.conf
