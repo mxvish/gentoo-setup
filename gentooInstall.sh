@@ -36,7 +36,7 @@ source /etc/profile
 
 emerge-webrsync -q
 
-echo "USE=\"dracut mount standalone\"" >> etc/portage/make.conf
+echo "USE=\"dracut mount standalone X\"" >> etc/portage/make.conf
 echo "ACCEPT_LICENSE=\"@BINARY-REDISTRIBUTABLE\"" >> etc/portage/make.conf
 emerge -DUuq @world
 
