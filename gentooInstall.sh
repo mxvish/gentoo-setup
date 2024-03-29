@@ -20,7 +20,7 @@ cd /mnt/gentoo
 links get.gentoo.org
 #find Stage 3 openrc and save tar.xz from distfiles.gentoo.org
 tar xpf stage3-*.tar.xz --xattrs-include='*.*' --numeric-owner
-echo "MAKEOPTS=\"-j11 -l12\"" >> etc/portage/make.conf
+echo 'MAKEOPTS="-j11 -l12"' >> etc/portage/make.conf
 
 cp -L /etc/resolv.conf /mnt/gentoo/etc/
 mount --types proc /proc /mnt/gentoo/proc
@@ -36,8 +36,8 @@ source /etc/profile
 
 emerge-webrsync -q
 
-echo "USE=\"dracut mount standalone X\"" >> etc/portage/make.conf
-echo "ACCEPT_LICENSE=\"@BINARY-REDISTRIBUTABLE\"" >> etc/portage/make.conf
+echo 'USE="dracut mount standalone X"' >> etc/portage/make.conf
+echo 'ACCEPT_LICENSE="@BINARY-REDISTRIBUTABLE"' >> etc/portage/make.conf
 emerge -DUuq @world
 
 echo "Asia/Tokyo" > /etc/timezone
