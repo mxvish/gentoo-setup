@@ -9,3 +9,11 @@ mkdir /mnt/arch
 
 mv eduroam.8021x /var/lib/iwd
 #edit edoroam.8021x
+
+packages=(
+    links
+    neofetch
+    vim
+)
+
+for i in "${packages[@]}"; do emerge -q "$i"; done
