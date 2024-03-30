@@ -11,9 +11,18 @@ mv eduroam.8021x /var/lib/iwd
 #edit edoroam.8021x
 
 packages=(
+    i3
     links
     neofetch
     vim
+    xterm
+    xorg-server
 )
 
 for i in "${packages[@]}"; do emerge -q "$i"; done
+
+echo -e 'if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+\texec startx
+fi' >> /home/mxvish/.bash_profile
+
+echo 'exec i3' > /home/mxvish/.xinitrc
