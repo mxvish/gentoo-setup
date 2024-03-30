@@ -13,8 +13,6 @@
 #mount /dev/nvme0n1p5 /mnt/gentoo
 #mkswap /dev/nvme0n1p6
 #swapon /dev/nvme0n1p6
-#mkdir /mnt/efi
-#mount /dev/nvme0n1p1 /mnt/efi
 
 cd /mnt/gentoo
 links get.gentoo.org
@@ -36,7 +34,7 @@ source /etc/profile
 
 emerge-webrsync -q
 
-echo 'USE="dracut mount standalone X"' >> etc/portage/make.conf
+echo 'USE="dracut elogind mount standalone X"' >> etc/portage/make.conf
 echo 'ACCEPT_LICENSE="@BINARY-REDISTRIBUTABLE"' >> etc/portage/make.conf
 emerge -DUuq @world
 
