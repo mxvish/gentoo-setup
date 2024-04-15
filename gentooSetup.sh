@@ -17,8 +17,8 @@ packages=(
     links
     neofetch
     vim
-    xterm
     xorg-server
+    xterm
 )
 
 for i in "${packages[@]}"; do emerge -q "$i"; done
