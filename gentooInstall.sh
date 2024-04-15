@@ -34,8 +34,8 @@ source /etc/profile
 
 emerge-webrsync -q
 
-echo 'USE="dracut elogind mount standalone X"' >> etc/portage/make.conf
-echo 'ACCEPT_LICENSE="@BINARY-REDISTRIBUTABLE"' >> etc/portage/make.conf
+echo 'ACCEPT_LICENSE="@BINARY-REDISTRIBUTABLE"
+USE="dracut elogind mount standalone X"' >> etc/portage/make.conf
 emerge -DUuq @world
 
 echo "Asia/Tokyo" > /etc/timezone
