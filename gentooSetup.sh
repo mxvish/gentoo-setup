@@ -20,6 +20,7 @@ packages=(
     i3lock
     links
     neofetch
+    noto-cjk
     vim
     xorg-server
     xterm
