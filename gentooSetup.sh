@@ -10,8 +10,12 @@ mkdir /mnt/arch
 mv eduroam.8021x /var/lib/iwd
 #edit edoroam.8021x
 
+getuto
+
 packages=(
+    dev-vcs/git
     dmenu
+    eselect-repository 
     i3
     i3lock
     links
@@ -22,6 +26,10 @@ packages=(
 )
 
 for i in "${packages[@]}"; do emerge -q "$i"; done
+
+eselect repository add brave-overlay git https://gitlab.com/jason.oliveira/brave-overlay.git
+emerge --sync -q brave-overlay
+emerge -q brave-bin::brave-overlay
 
 echo -e 'if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
 \texec startx
