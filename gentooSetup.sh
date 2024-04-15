@@ -26,4 +26,5 @@ echo -e 'if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
 fi' >> /home/mxvish/.bash_profile
 
 echo 'exec i3' > /home/mxvish/.xinitrc
-echo 'XTerm.vt100.reverseVideo: true' > ~/.Xresources
+echo 'XTerm.vt100.faceSize: 10
+XTerm.vt100.reverseVideo: true' > ~/.Xresources
