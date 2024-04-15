@@ -11,7 +11,9 @@ mv eduroam.8021x /var/lib/iwd
 #edit edoroam.8021x
 
 packages=(
+    dmenu
     i3
+    i3lock
     links
     neofetch
     vim
