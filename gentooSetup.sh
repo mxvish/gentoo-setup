@@ -15,9 +15,11 @@ getuto
 packages=(
     dev-vcs/git
     dmenu
-    eselect-repository 
+    eselect-repository
+    gentoolkit
     i3
     i3lock
+    i3status
     links
     neofetch
     noto-cjk
