@@ -34,6 +34,10 @@ eselect repository add brave-overlay git https://gitlab.com/jason.oliveira/brave
 emerge --sync -q brave-overlay
 emerge -q brave-bin::brave-overlay
 
+euse -E alsa
+emerge -DUuq @world
+emerge -q alsa-utils
+
 echo -e 'if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
 \texec startx
 fi' >> /home/mxvish/.bash_profile
