@@ -23,6 +23,7 @@ packages=(
     links
     neofetch
     noto-cjk
+    ranger
     vim
     xorg-server
     xterm
