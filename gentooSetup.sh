@@ -26,6 +26,7 @@ packages=(
     ranger
     vim
     xorg-server
+    xrandr
     xterm
 )
 
