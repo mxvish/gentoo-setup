@@ -50,4 +50,4 @@ echo 'exec i3' > /home/mxvish/.xinitrc
 echo 'XTerm.vt100.faceSize: 10
 XTerm.vt100.reverseVideo: true' > ~/.Xresources
 
-echo 'GRUB_CMDLINE_LINUX_DEFAULT="psmouse.synaptics_intertouch=1"' >> /etc/default/grub
+echo 'GRUB_CMDLINE_LINUX_DEFAULT="psmouse.synaptics_intertouch=1 snd-hda-intel.model=dell-headset-multi"' >> /etc/default/grub
