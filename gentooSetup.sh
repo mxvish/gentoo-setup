@@ -16,6 +16,8 @@ packages=(
     dev-vcs/git
     dmenu
     eselect-repository
+    fcitx
+    fcitx-anthy
     gentoolkit
     i3
     i3lock
