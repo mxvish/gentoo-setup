@@ -27,6 +27,7 @@ packages=(
     noto-cjk
     ranger
     vim
+    xfce4-terminal
     xorg-server
     xrandr
     xterm
