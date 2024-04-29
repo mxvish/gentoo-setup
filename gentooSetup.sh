@@ -25,6 +25,7 @@ packages=(
     links
     neofetch
     noto-cjk
+    noto-emoji
     ranger
     vim
     xfce4-terminal
