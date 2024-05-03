@@ -13,6 +13,7 @@ mv eduroam.8021x /var/lib/iwd
 getuto
 
 packages=(
+    dev-python/pip
     dev-vcs/git
     dmenu
     eselect-repository
