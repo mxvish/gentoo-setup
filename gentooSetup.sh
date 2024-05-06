@@ -58,3 +58,8 @@ echo 'XTerm.vt100.faceSize: 10
 XTerm.vt100.reverseVideo: true' > ~/.Xresources
 
 echo 'GRUB_CMDLINE_LINUX_DEFAULT="psmouse.synaptics_intertouch=1 snd-hda-intel.model=dell-headset-multi"' >> /etc/default/grub
+
+echo 'clear lock
+clear control
+keycode 66 = Control_L
+add control = Control_L Control_R' > /home/$USER/.Xmodmap
