@@ -30,6 +30,7 @@ packages=(
     ranger
     vim
     xfce4-terminal
+    xmodmap
     xorg-server
     xrandr
     xterm
