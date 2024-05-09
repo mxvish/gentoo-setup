@@ -29,6 +29,7 @@ packages=(
     noto-emoji
     ranger
     vim
+    x11-misc/xclip
     xfce4-terminal
     xmodmap
     xorg-server
