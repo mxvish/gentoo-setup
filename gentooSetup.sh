@@ -63,3 +63,6 @@ echo 'clear lock
 clear control
 keycode 66 = Control_L
 add control = Control_L Control_R' > /home/$USER/.Xmodmap
+
+wget https://raw.githubusercontent.com/mxvish/vimrc/main/vimrc
+mv vimrc /home/$USER/.vimrc
