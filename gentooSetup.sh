@@ -28,6 +28,7 @@ packages=(
     noto-cjk
     noto-emoji
     ranger
+    scrot
     vim
     x11-misc/xclip
     xfce4-terminal
