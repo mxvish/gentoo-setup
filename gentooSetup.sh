@@ -17,6 +17,7 @@ packages=(
     dev-vcs/git
     dmenu
     eselect-repository
+    exfatprogs
     fcitx
     fcitx-anthy
     gentoolkit
