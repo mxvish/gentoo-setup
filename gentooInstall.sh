@@ -36,7 +36,8 @@ emerge-webrsync -q
 
 echo 'ACCEPT_LICENSE="@BINARY-REDISTRIBUTABLE"
 USE="dracut elogind mount standalone X"
-FEATURES="getbinpkg"' >> etc/portage/make.conf
+FEATURES="getbinpkg"
+INPUT_DEVICES="synaptics libinput"' >> etc/portage/make.conf
 emerge -DUuq @world
 
 echo "Asia/Tokyo" > /etc/timezone
