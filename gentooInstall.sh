@@ -38,6 +38,7 @@ echo 'ACCEPT_LICENSE="@BINARY-REDISTRIBUTABLE"
 USE="dracut elogind mount standalone X"
 FEATURES="getbinpkg"
 INPUT_DEVICES="synaptics libinput"' >> etc/portage/make.conf
+getuto
 emerge -DUuq @world
 
 echo "Asia/Tokyo" > /etc/timezone
