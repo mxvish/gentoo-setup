@@ -67,3 +67,4 @@ wget https://raw.githubusercontent.com/mxvish/vimrc/main/vimrc
 mv vimrc /home/$USER/.vimrc
 
 mv bashrc /home/$USER/.bashrc
+mv config /home/$USER/.config/i3
