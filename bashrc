@@ -1,10 +1,23 @@
 # /etc/skel/.bashrc
+#
+# This file is sourced by all *interactive* bash shells on startup,
+# including some apparently interactive shells such as scp and rcp
+# that can't tolerate any output.  So make sure this doesn't display
+# anything or bad things will happen !
+
+
+# Test for an interactive shell.  There is no need to set anything
+# past this point for scp and rcp, and it's important to refrain from
+# outputting anything in those cases.
 if [[ $- != *i* ]] ; then
+	# Shell is non-interactive.  Be done now!
 	return
 fi
 
+alias 1='xrandr --output eDP-1 --brightness 0.1'
 alias 2='xrandr --output eDP-1 --brightness 0.25'
 alias 3='xrandr --output eDP-1 --brightness 0.3'
+alias 5='xrandr --output eDP-1 --brightness 0.5'
 alias 10='xrandr --output eDP-1 --brightness 1'
 function aw {
     local url="https://duckduckgo.com/?q=arch+wiki+"
@@ -12,18 +25,26 @@ function aw {
 		url+="$arg+"
 	done
     url+="&t=brave&ia=web"
-    brave $url
+    brave-bin $url
 }
 alias ca='cat /sys/class/power_supply/BAT1/capacity'
 alias dh='df -h'
 alias f='free -m'
+function gw {
+    local url="https://duckduckgo.com/?q=gentoo+wiki+"
+	for arg in $@; do
+		url+="$arg+"
+	done
+    url+="&t=brave&ia=web"
+    brave-bin $url
+}
 function i {
     url="https://duckduckgo.com/?q=wiki+"
 	for arg in $@; do
 		url+="$arg+"
 	done
     url+="&t=brave&ia=web"
-    brave $url
+    brave-bin $url
 }
 alias li='clisp'
 alias ls='ls --color=auto'
@@ -39,7 +60,10 @@ alias sr='sudo pacman -R --noconfirm;sudo pacman -Rns $(pacman -Qdtq) --noconfir
 '
 alias ud='sudo umount /dev/sda2'
 alias v='vim'
+alias va='vim ~/a; xc ~/a'
+alias vb='vim ~/b; xc ~/b'
 alias vc='vim ~/.config/i3/config'
+alias vd='vim ~/d; xc ~/d'
 alias vv='vim ~/.vimrc'
 alias x='brave-bin'
 alias xc='xclip -sel c <'
@@ -50,4 +74,4 @@ PS1='\W \# $'
 xmodmap ~/.Xmodmap
 xrandr --output eDP-1 --brightness 0.3
 xrandr --output HDMI-1 --auto --left-of eDP-1
-#xrandr --output HDMI-1 --rotate left
+xrandr --output HDMI-1 --rotate left
