@@ -48,6 +48,6 @@ PROMPT_COMMAND="printf '\n';$PROMPT_COMMAND"
 PS1='\W \# $'
 
 xmodmap ~/.Xmodmap
-xrandr --output eDP-1 --brightness 0.5
+xrandr --output eDP-1 --brightness 0.3
 xrandr --output HDMI-1 --auto --left-of eDP-1
 #xrandr --output HDMI-1 --rotate left
