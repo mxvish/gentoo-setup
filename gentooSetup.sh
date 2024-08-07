@@ -18,8 +18,6 @@ packages=(
     dmenu
     eselect-repository
     exfatprogs
-    fcitx
-    fcitx-anthy
     gentoolkit
     i3
     i3lock
