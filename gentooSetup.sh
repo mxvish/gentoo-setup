@@ -69,4 +69,4 @@ mv vimrc /home/$USER/.vimrc
 
 mv bashrc /home/$USER/.bashrc
 mv config /home/$USER/.config/i3
-mv i3status /etc/
+mv i3status.conf /etc/
