@@ -76,7 +76,7 @@ passwd
 emerge -q grub os-prober
 grub-install --efi-directory=/mnt/efi/
 echo 'GRUB_DISABLE_OS_PROBER=false
-GRUB_CMDLINE_LINUX_DEFAULT="psmouse.synaptics_intertouch=1 quiet snd-hda-intel.model=dell-headset-multi i8042.nopnp"' >> /etc/default/grub
+GRUB_CMDLINE_LINUX_DEFAULT="psmouse.synaptics_intertouch=1 quiet snd-hda-intel.model=dell-headset-multi"' >> /etc/default/grub
 
 grub-mkconfig -o /boot/grub/grub.cfg
 
