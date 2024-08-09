@@ -57,8 +57,6 @@ fi' >> /home/mxvish/.bash_profile
 
 echo 'exec i3' > /home/mxvish/.xinitrc
 
-echo 'GRUB_CMDLINE_LINUX_DEFAULT="psmouse.synaptics_intertouch=1 quiet snd-hda-intel.model=dell-headset-multi"' >> /etc/default/grub
-
 echo 'clear lock
 clear control
 keycode 66 = Control_L
