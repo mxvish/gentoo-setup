@@ -73,7 +73,9 @@ echo -e '127.0.0.1\tmxvish.localdomain\tmxvish' >> /etc/hosts
 passwd
 
 #configuring the bootloader
+echo "sys-fs/lvm2 lvm" >> /etc/portage/package.use/lvm
 emerge -q grub os-prober
+
 grub-install --efi-directory=/mnt/efi/
 echo 'GRUB_DISABLE_OS_PROBER=false
 GRUB_CMDLINE_LINUX_DEFAULT="psmouse.synaptics_intertouch=1 quiet snd-hda-intel.model=dell-headset-multi"' >> /etc/default/grub
