@@ -45,12 +45,13 @@ eselect repository add brave-overlay git https://gitlab.com/jason.oliveira/brave
 emerge --sync -q brave-overlay
 echo "dev-libs/libpthread-stubs **" >> /etc/portage/package.accept_keywords/libpthread-stubs
 echo 'dev-python/setuptools python_targets_python3_11' > /etc/portage/package.use/setuptools
+echo ">=app-i18n/fcitx-qt-5.1.5-r2 qt6" >> /etc/portage/package.use/fcitx
 
 #echo "net-im/zoom all-rights-reserved" >> /etc/portage/package.license
 #echo "net-im/zoom ~amd64" >> /etc/portage/package.accept_keywords/net-im-zoom
 
 emerge -DUuq @world
-emerge -q alsa-utils brave-bin::brave-overlay
+emerge -q alsa-utils brave-bin::brave-overlay fcitx-config-tool
 
 echo -e 'if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
 \texec startx
