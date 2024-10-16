@@ -38,6 +38,10 @@ echo 'ACCEPT_LICENSE="@BINARY-REDISTRIBUTABLE"
 USE="dracut elogind mount standalone X"
 FEATURES="getbinpkg"
 INPUT_DEVICES="synaptics libinput"' >> etc/portage/make.conf
+
+#emerge --sync -q
+#etc-update --automode -5
+
 getuto
 emerge -DUuq @world
 
