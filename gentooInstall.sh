@@ -35,7 +35,7 @@ source /etc/profile
 emerge-webrsync -q
 
 echo 'ACCEPT_LICENSE="@BINARY-REDISTRIBUTABLE"
-USE="dracut elogind mount standalone X"
+USE="dracut elogind mount standalone X pulseaudio"
 FEATURES="getbinpkg"
 INPUT_DEVICES="synaptics libinput"' >> etc/portage/make.conf
 
