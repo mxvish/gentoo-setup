@@ -33,6 +33,7 @@ packages=(
     dmenu
     eselect-repository
     exfatprogs
+    fcitx
     fcitx-config-tool
     gentoolkit
     i3
