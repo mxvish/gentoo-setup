@@ -67,6 +67,16 @@ clear control
 keycode 66 = Control_L
 add control = Control_L Control_R' > /home/$USER/.Xmodmap
 
+mkdir /etc/X11/xorg.conf.d
+echo 'Section "InputClass"
+     Identifier "libinput touchpad catchall"
+     MatchIsTouchpad "on"
+     MatchDevicePath "/dev/input/event*"
+     Option "Tapping" "True"
+     Option "TappingDrag" "True"
+     Driver "libinput"
+EndSection' > /etc/X11/xorg.conf.d/40-libinput.conf
+
 wget https://raw.githubusercontent.com/mxvish/vimrc/main/vimrc
 mv vimrc /home/$USER/.vimrc
 
