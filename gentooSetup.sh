@@ -79,6 +79,7 @@ EndSection' > /etc/X11/xorg.conf.d/40-libinput.conf
 
 wget https://raw.githubusercontent.com/mxvish/vimrc/main/vimrc
 mv vimrc /home/$USER/.vimrc
+chown $USER:$USER /home/$USER/.vimrc
 
 mv bashrc /home/$USER/.bashrc
 chown $USER:$USER /home/$USER/.bashrc
