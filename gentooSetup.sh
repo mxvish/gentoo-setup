@@ -10,7 +10,7 @@ mkdir /mnt/arch
 mv eduroam.8021x /var/lib/iwd
 #edit edoroam.8021x
 
-euse -E alsa
+#euse -E alsa
 
 eselect repository add brave-overlay git https://gitlab.com/jason.oliveira/brave-overlay.git
 emerge --sync -q brave-overlay
@@ -26,7 +26,6 @@ getuto
 emerge -DUuq @world
 
 packages=(
-    alsa-utils
     brave-bin::brave-overlay
     dev-python/pip
     dev-vcs/git
@@ -44,6 +43,7 @@ packages=(
     neofetch
     noto-cjk
     noto-emoji
+    pulseaudio
     ranger
     scrot
     vim
