@@ -22,6 +22,7 @@ echo "app-i18n/mozc fcitx5" > /etc/portage/package.use/mozc
 #echo "net-im/zoom all-rights-reserved" >> /etc/portage/package.license
 #echo "net-im/zoom ~amd64" >> /etc/portage/package.accept_keywords/net-im-zoom
 
+rm -rf /var/cache/edb/dep/*
 getuto
 emerge -DUuq @world
 
