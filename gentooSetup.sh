@@ -27,6 +27,7 @@ getuto
 emerge -DUuq @world
 
 packages=(
+    blueman
     brave-bin::brave-overlay
     dev-python/pip
     dev-vcs/git
