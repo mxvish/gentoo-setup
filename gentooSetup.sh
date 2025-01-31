@@ -19,6 +19,8 @@ echo 'dev-python/setuptools python_targets_python3_11' > /etc/portage/package.us
 echo ">=app-i18n/fcitx-qt-5.1.5-r2 qt6" > /etc/portage/package.use/fcitx
 echo "app-i18n/mozc fcitx5" > /etc/portage/package.use/mozc
 
+echo "net-im/discord all-rights-reserved" >> /etc/portage/package.license
+
 #echo "net-im/zoom all-rights-reserved" >> /etc/portage/package.license
 #echo "net-im/zoom ~amd64" >> /etc/portage/package.accept_keywords/net-im-zoom
 
@@ -31,6 +33,7 @@ packages=(
     brave-bin::brave-overlay
     dev-python/pip
     dev-vcs/git
+    discord
     dmenu
     eselect-repository
     exfatprogs
@@ -58,6 +61,12 @@ packages=(
 )
 
 for i in "${packages[@]}"; do emerge -q "$i"; done
+
+wget -q -O discord.tar.gz "https://discord.com/api/download?platform=linux&format=tar.gz"
+tar -xpf discord.tar.gz
+rm -rf /opt/discord
+mv Discord /opt/discord
+rm discord.tar.gz
 
 echo -e 'if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
 \texec startx
