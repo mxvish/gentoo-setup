@@ -25,7 +25,7 @@ function aw {
 		url+="$arg+"
 	done
     url+="&t=brave&ia=web"
-    brave-bin $url
+    firefox $url
 }
 alias ca='cat /sys/class/power_supply/BAT1/capacity'
 alias dh='df -h'
@@ -36,7 +36,7 @@ function gw {
 		url+="$arg+"
 	done
     url+="&t=brave&ia=web"
-    brave-bin $url
+    firefox $url
 }
 function i {
     url="https://duckduckgo.com/?q=wiki+"
@@ -44,10 +44,20 @@ function i {
 		url+="$arg+"
 	done
     url+="&t=brave&ia=web"
-    brave-bin $url
+    firefox $url
+}
+function ii {
+	url="https://duckduckgo.com/?q=wiki+"
+	for arg in $@; do
+		url+="$arg+"
+	done
+	firefox $url
+	url+="+pixiv"
+	firefox $url
+	url=`echo "$url" | sed 's/pixiv/dic.nicovideo/'`
+	firefox $url
 }
 alias li='clisp'
-alias ls='ls --color=auto'
 alias md='sudo mount /dev/sda2 /mnt/usb'
 alias mk='mkdir'
 alias n='neofetch'
@@ -63,13 +73,12 @@ alias v='vim'
 alias va='vim ~/a; xc ~/a'
 alias vb='vim ~/b; xc ~/b'
 alias vc='vim ~/.config/i3/config'
-alias vd='vim ~/d; xc ~/d'
 alias vv='vim ~/.vimrc'
-alias x='brave-bin'
+alias x='firefox'
 alias xc='xclip -sel c <'
 
 PROMPT_COMMAND="printf '\n';$PROMPT_COMMAND"
-PS1='\W \# $'
+PS1='\W $'
 
 xmodmap ~/.Xmodmap
 xrandr --output eDP-1 --brightness 0.3
