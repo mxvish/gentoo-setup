@@ -122,9 +122,9 @@ bindsym $mod+a exec firefox amazon.co.jp
 bindsym $mod+b exec firefox
 bindsym $mod+Shift+b exec firefox "https://fes.rakuten-bank.co.jp/MS/main/RbS?CurrentPageID=START&&COMMAND=LOGIN"
 bindsym $mod+Ctrl+b exec firefox http://mubou.seesaa.net
-bindsym $mod+c exec java ~/cd.java
+bindsym $mod+c exec firefox chat.openai.com
 bindsym $mod+Shift+c exec firefox docs.google.com/spreadsheets/d/1ECwWvDWYEH4iZL_Hy9V2Xqy0NOVmpsAP/
-bindsym $mod+Ctrl+c exec firefox chat.openai.com
+bindsym $mod+Ctrl+c exec java ~/cd.java
 bindsym $mod+Shift+d exec firefox deepl.com
 bindsym $mod+e exec firefox keep.google.com
 bindsym $mod+g exec firefox gakujo.shizuoka.ac.jp
@@ -155,10 +155,10 @@ bindsym $mod+Ctrl+t exec firefox translate.google.com
 bindsym $mod+u exec firefox https://opac.lib.shizuoka.ac.jp/simple/
 bindsym $mod+v exec firefox docs.google.com/spreadsheets/d/1iuQ-DxULNRZp0QisqnwkH33GpLA8dkec/
 bindsym $mod+Shift+v exec firefox vpn.inf.shizuoka.ac.jp/dana-na/auth/url_3/welcome.cgi
-bindsym $mod+w exec firefox google.com/search?q=weather
+bindsym $mod+w exec firefox https://www.accuweather.com/en/jp/hamamatsu-shi/226090/weather-forecast/226090
 bindsym $mod+x exec i3lock -c 000000
-#bindsym $mod+y exec firefox https://youtube.com/playlist?list=WL
 bindsym $mod+y exec firefox https://www.youtube.com/feed/playlists
+bindsym $mod+Shift+y exec blueman-manager
 
 bindsym Print exec scrot
 
@@ -167,4 +167,3 @@ bindsym Print exec scrot
 #bindsym $mod+Shift+j resize grow height 10 px or 10 ppt
 #bindsym $mod+Shift+k resize shrink height 10 px or 10 ppt
 #bindsym $mod+Shift+l resize grow width 10 px or 10 ppt
-
