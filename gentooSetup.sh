@@ -12,7 +12,6 @@ mv eduroam.8021x /var/lib/iwd
 
 #euse -E alsa
 
-eselect repository add brave-overlay git https://gitlab.com/jason.oliveira/brave-overlay.git
 emerge --sync -q brave-overlay
 echo "dev-libs/libpthread-stubs **" >> /etc/portage/package.accept_keywords/libpthread-stubs
 echo 'dev-python/setuptools python_targets_python3_11' > /etc/portage/package.use/setuptools
@@ -28,7 +27,6 @@ emerge -DUuq @world
 
 packages=(
     blueman
-    brave-bin::brave-overlay
     dev-python/pip
     dev-vcs/git
     dmenu
