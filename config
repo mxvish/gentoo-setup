@@ -122,47 +122,47 @@ bar {
 exec --no-startup-id fcitx -d
 exec pulseaudio -D
 
-bindsym $mod+a exec brave-bin amazon.co.jp
-bindsym $mod+b exec brave-bin
-bindsym $mod+Shift+b exec brave-bin "https://fes.rakuten-bank.co.jp/MS/main/RbS?CurrentPageID=START&&COMMAND=LOGIN"
-bindsym $mod+Ctrl+b exec brave-bin http://mubou.seesaa.net
+bindsym $mod+a exec firefox amazon.co.jp
+bindsym $mod+b exec firefox
+bindsym $mod+Shift+b exec firefox "https://fes.rakuten-bank.co.jp/MS/main/RbS?CurrentPageID=START&&COMMAND=LOGIN"
+bindsym $mod+Ctrl+b exec firefox http://mubou.seesaa.net
 bindsym $mod+c exec java ~/cd.java
-bindsym $mod+Shift+c exec brave-bin docs.google.com/spreadsheets/d/1ECwWvDWYEH4iZL_Hy9V2Xqy0NOVmpsAP/
-bindsym $mod+Ctrl+c exec brave-bin chat.openai.com
-bindsym $mod+Shift+d exec brave-bin deepl.com
-bindsym $mod+e exec brave-bin keep.google.com
-bindsym $mod+g exec brave-bin gakujo.shizuoka.ac.jp
-bindsym $mod+Shift+g exec brave-bin github.com/mxvish/?tab=repositories
-bindsym $mod+Ctrl+g exec brave-bin scholar.google.com
-bindsym $mod+Shift+h exec brave-bin https://www.lib-city-hamamatsu.jp/licsxp-opac/WOpacEsSchCmpdDispAction.do?moveToGamenId=esschcmpd
-bindsym $mod+i exec brave-bin discord.com/channels/@me
-bindsym $mod+j exec brave-bin shonenjumpplus.com
-bindsym $mod+Shift+k exec brave-bin https://keybr.com
-bindsym $mod+Ctrl+k exec brave-bin https://www.kyorindo-netsuper.jp
-bindsym $mod+Shift+l exec brave-bin https://linkedin.com/in/koshima
-bindsym $mod+m exec brave-bin mail.google.com/mail/u/0/
-bindsym $mod+Shift+m exec brave-bin google.com/maps
-bindsym $mod+n exec brave-bin amplenote.com/notes
-bindsym $mod+o exec brave-bin onedrive.live.com
-bindsym $mod+Shift+o exec brave-bin outlook.office.com
-bindsym $mod+p exec brave-bin pubmed.ncbi.nlm.nih.gov
-bindsym $mod+Shift+p exec brave-bin perplexity.ai
+bindsym $mod+Shift+c exec firefox docs.google.com/spreadsheets/d/1ECwWvDWYEH4iZL_Hy9V2Xqy0NOVmpsAP/
+bindsym $mod+Ctrl+c exec firefox chat.openai.com
+bindsym $mod+Shift+d exec firefox deepl.com
+bindsym $mod+e exec firefox keep.google.com
+bindsym $mod+g exec firefox gakujo.shizuoka.ac.jp
+bindsym $mod+Shift+g exec firefox github.com/mxvish/?tab=repositories
+bindsym $mod+Ctrl+g exec firefox scholar.google.com
+bindsym $mod+Shift+h exec firefox https://www.lib-city-hamamatsu.jp/licsxp-opac/WOpacEsSchCmpdDispAction.do?moveToGamenId=esschcmpd
+bindsym $mod+i exec firefox discord.com/channels/@me
+bindsym $mod+j exec firefox shonenjumpplus.com
+bindsym $mod+Shift+k exec firefox https://keybr.com
+bindsym $mod+Ctrl+k exec firefox https://www.kyorindo-netsuper.jp
+bindsym $mod+Shift+l exec firefox https://linkedin.com/in/koshima
+bindsym $mod+m exec firefox mail.google.com/mail/u/0/
+bindsym $mod+Shift+m exec firefox google.com/maps
+bindsym $mod+n exec firefox amplenote.com/notes
+bindsym $mod+o exec firefox onedrive.live.com
+bindsym $mod+Shift+o exec firefox outlook.office.com
+bindsym $mod+p exec firefox pubmed.ncbi.nlm.nih.gov
+bindsym $mod+Shift+p exec firefox perplexity.ai
 bindsym $mod+Ctrl+p exec systemctl poweroff
-bindsym $mod+r exec brave-bin drive.google.com/drive/my-drive
+bindsym $mod+r exec firefox drive.google.com/drive/my-drive
 bindsym $mod+Ctrl+r exec systemctl reboot -i
-bindsym $mod+s exec brave-bin https://www.rakuten-sec.co.jp/ITS/V_ACT_Login.html
-bindsym $mod+Shift+s exec brave-bin app.slack.com/client
-bindsym $mod+Ctrl+s exec brave-bin https://ib.surugabank.co.jp/im/IBGate
-bindsym $mod+t exec brave-bin https://todoist.com/app
-bindsym $mod+Shift+t exec brave-bin https://teams.microsoft.com
-bindsym $mod+Ctrl+t exec brave-bin translate.google.com
-bindsym $mod+u exec brave-bin https://opac.lib.shizuoka.ac.jp/simple/
-bindsym $mod+v exec brave-bin docs.google.com/spreadsheets/d/1iuQ-DxULNRZp0QisqnwkH33GpLA8dkec/
-bindsym $mod+Shift+v exec brave-bin vpn.inf.shizuoka.ac.jp/dana-na/auth/url_3/welcome.cgi
-bindsym $mod+w exec brave-bin google.com/search?q=weather
+bindsym $mod+s exec firefox https://www.rakuten-sec.co.jp/ITS/V_ACT_Login.html
+bindsym $mod+Shift+s exec firefox app.slack.com/client
+bindsym $mod+Ctrl+s exec firefox https://ib.surugabank.co.jp/im/IBGate
+bindsym $mod+t exec firefox https://todoist.com/app
+bindsym $mod+Shift+t exec firefox https://teams.microsoft.com
+bindsym $mod+Ctrl+t exec firefox translate.google.com
+bindsym $mod+u exec firefox https://opac.lib.shizuoka.ac.jp/simple/
+bindsym $mod+v exec firefox docs.google.com/spreadsheets/d/1iuQ-DxULNRZp0QisqnwkH33GpLA8dkec/
+bindsym $mod+Shift+v exec firefox vpn.inf.shizuoka.ac.jp/dana-na/auth/url_3/welcome.cgi
+bindsym $mod+w exec firefox google.com/search?q=weather
 bindsym $mod+x exec i3lock -c 000000
-#bindsym $mod+y exec brave-bin https://youtube.com/playlist?list=WL
-bindsym $mod+y exec brave-bin https://www.youtube.com/feed/playlists
+#bindsym $mod+y exec firefox https://youtube.com/playlist?list=WL
+bindsym $mod+y exec firefox https://www.youtube.com/feed/playlists
 
 bindsym Print exec scrot
 
@@ -171,3 +171,4 @@ bindsym Print exec scrot
 #bindsym $mod+Shift+j resize grow height 10 px or 10 ppt
 #bindsym $mod+Shift+k resize shrink height 10 px or 10 ppt
 #bindsym $mod+Shift+l resize grow width 10 px or 10 ppt
+
