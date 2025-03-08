@@ -73,7 +73,7 @@ EnableNetworkConfiguration=true
 [Network]
 NameResolvingService=resolvconf' > /etc/iwd/main.conf
 
-echo -e '127.0.0.1\tmxvish.localdomain\tmxvish' >> /etc/hosts
+#echo -e '127.0.0.1\tmxvish.localdomain\tmxvish' >> /etc/hosts
 passwd
 
 #configuring the bootloader
