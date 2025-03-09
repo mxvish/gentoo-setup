@@ -87,5 +87,5 @@ chown $USER:$USER /home/$USER/.bashrc
 
 curl -s https://raw.githubusercontent.com/mxvish/i3config/main/config > ~/.config/i3/config
 chown $USER:$USER /home/$USER/.config/i3/config
-wget -q https://raw.githubusercontent.com/mxvish/i3status/main/i3status.conf
+wget -q https://raw.githubusercontent.com/mxvish/i3config/main/i3status.conf
 mv i3status.conf /etc/
