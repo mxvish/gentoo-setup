@@ -85,7 +85,7 @@ chown $USER:$USER /home/$USER/.vimrc
 mv bashrc /home/$USER/.bashrc
 chown $USER:$USER /home/$USER/.bashrc
 
-mv config /home/$USER/.config/i3
+curl -s https://raw.githubusercontent.com/mxvish/i3config/main/config > ~/.config/i3/config
 chown $USER:$USER /home/$USER/.config/i3/config
 wget -q https://raw.githubusercontent.com/mxvish/i3status/main/i3status.conf
 mv i3status.conf /etc/
