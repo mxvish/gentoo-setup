@@ -33,3 +33,5 @@ locale-gen
 
 getuto
 emerge -quDU @world
+
+emerge -q gentoo-kernel-bin linux-firmware
