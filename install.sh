@@ -22,7 +22,7 @@ source /etc/profile
 emerge-webrsync
 
 echo '
-ACCEPT_LICENSE="-* @BINARY-REDISTRIBUTABLE"
+ACCEPT_LICENSE="@BINARY-REDISTRIBUTABLE"
 # Appending getbinpkg to the list of values within the FEATURES variable
 FEATURES="${FEATURES} getbinpkg"
 MAKEOPTS="-j4 -l5"' >> /etc/portage/make.conf
