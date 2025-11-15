@@ -29,7 +29,9 @@ echo '
 ACCEPT_LICENSE="@BINARY-REDISTRIBUTABLE"
 # Appending getbinpkg to the list of values within the FEATURES variable
 FEATURES="${FEATURES} getbinpkg"
-MAKEOPTS="-j4 -l5"' >> /etc/portage/make.conf
+MAKEOPTS="-j4 -l5"
+USE="mount"
+' >> /etc/portage/make.conf
 
 ln -sf /usr/share/zoneinfo/Japan /etc/localtime
 
@@ -55,6 +57,20 @@ echo -e "
 127.0.0.1\t$HOSTNAME.localdomain\t$HOSTNAME" >> /etc/hosts
 
 passwd
-
 useradd -G wheel,audio,video -m $HOSTNAME
 passwd $HOSTNAME
+
+emerge -q efibootmgr grub ifplugd iwd openresolv os-prober
+grub-install --target=x86_64-efi --efi-directory=/efi/ --bootloader-id=GRUB
+
+echo '
+GRUB_DISABLE_OS_PROBER=false
+GRUB_CMDLINE_LINUX_DEFAULT="psmouse.synaptics_intertouch=1 quiet snd-hda-intel.model=dell-headset-multi"
+' >> /etc/default/grub
+grub-mkconfig -o /boot/grub/grub.cfg
+
+echo '[General]
+EnableNetworkConfiguration=true
+
+[Network]
+NameResolvingService=resolvconf' > /etc/iwd/main.conf
