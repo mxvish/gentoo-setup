@@ -74,3 +74,6 @@ EnableNetworkConfiguration=true
 
 [Network]
 NameResolvingService=resolvconf' > /etc/iwd/main.conf
+
+exit
+reboot
